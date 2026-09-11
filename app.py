@@ -12,7 +12,7 @@ def lp(slug):
 
 @app.route("/lp/help")
 def list_slugs():
-    slug_list = [f for f in os.listdir("templates") if f.endswith(".html")]
+    slug_list = [f for f in os.listdir("Templates") if f.endswith(".html")]
     return {str(i): f.replace(".html", "") for i, f in enumerate(slug_list)}
 
 
