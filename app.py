@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/<slug>")
 def lp(slug):
-    path = os.path.join("templates", f"{slug}.html")
+    path = os.path.join("Templates", f"{slug}.html")
     if not os.path.exists(path):
         abort(404)
     return render_template(f"{slug}.html")
