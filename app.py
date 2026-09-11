@@ -15,5 +15,6 @@ def list_slugs():
     slug_list = [f for f in os.listdir("templates") if f.endswith(".html")]
     return {str(i): f.replace(".html", "") for i, f in enumerate(slug_list)}
 
+
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5007, debug=False)
